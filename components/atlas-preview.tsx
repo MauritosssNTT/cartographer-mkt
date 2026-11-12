@@ -1,0 +1,13 @@
+const nodes = [
+  { label: "Core Knowledge", x: 450, y: 220, r: 38, group: "core" },
+  { label: "Concepts", x: 250, y: 115, r: 25, group: "foundation" }, { label: "Documentation", x: 420, y: 85, r: 27, group: "foundation" }, { label: "Reference", x: 610, y: 112, r: 23, group: "foundation" },
+  { label: "Best Practices", x: 225, y: 270, r: 27, group: "practice" }, { label: "Architecture", x: 325, y: 330, r: 25, group: "practice" }, { label: "APIs", x: 510, y: 340, r: 22, group: "practice" }, { label: "Integrations", x: 665, y: 285, r: 25, group: "practice" },
+  { label: "Security", x: 735, y: 155, r: 25, group: "operations" }, { label: "Operations", x: 745, y: 245, r: 26, group: "operations" }, { label: "Monitoring", x: 670, y: 360, r: 22, group: "operations" },
+  { label: "Tutorials", x: 120, y: 175, r: 21, group: "learning" }, { label: "Examples", x: 125, y: 315, r: 22, group: "learning" }, { label: "Troubleshooting", x: 245, y: 395, r: 24, group: "learning" },
+  { label: "Cost Optimization", x: 525, y: 425, r: 26, group: "insight" }, { label: "Patterns", x: 560, y: 185, r: 19, group: "insight" }, { label: "Governance", x: 355, y: 180, r: 20, group: "insight" }, { label: "Release Notes", x: 445, y: 410, r: 19, group: "insight" }
+];
+const connections = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [0, 9], [0, 10], [0, 11], [0, 12], [0, 13], [0, 14], [0, 15], [0, 16], [0, 17], [1, 11], [1, 16], [2, 3], [2, 15], [3, 8], [4, 12], [4, 5], [5, 13], [6, 14], [6, 17], [7, 9], [7, 10], [8, 9], [9, 10], [11, 12], [14, 17]];
+
+export function AtlasPreview() {
+  return <section className="atlas"><div className="atlas-heading"><div><h2>Cartographer Atlas</h2><p>Knowledge graph preview</p></div><span>Preview</span></div><div className="atlas-canvas"><svg viewBox="0 0 900 480" role="img" aria-label="Preview of a connected knowledge graph"><defs><radialGradient id="atlas-glow"><stop stopColor="#d8fae6" stopOpacity=".9"/><stop offset="1" stopColor="#d8fae6" stopOpacity="0"/></radialGradient></defs><ellipse cx="450" cy="220" rx="260" ry="190" fill="url(#atlas-glow)"/>{connections.map(([from, to]) => <line key={`${from}-${to}`} className="atlas-link" x1={nodes[from].x} y1={nodes[from].y} x2={nodes[to].x} y2={nodes[to].y}/>) }{nodes.map((node) => <g className={`atlas-node ${node.group}`} key={node.label} tabIndex={0} aria-label={node.label}><circle cx={node.x} cy={node.y} r={node.r}/><text x={node.x} y={node.y + 4} textAnchor="middle">{node.label}</text></g>)}</svg></div><p className="atlas-caption">A visual preview of how concepts, sources and operational guidance connect in a Cartographer Knowledge Base.</p></section>;
+}

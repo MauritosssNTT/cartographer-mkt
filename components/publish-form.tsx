@@ -1,0 +1,9 @@
+"use client";
+import { FormEvent, useState } from "react";
+import { Nav } from "./nav";
+
+export function PublishForm() {
+  const [published, setPublished] = useState(false);
+  const submit = (event: FormEvent) => { event.preventDefault(); setPublished(true); };
+  return <><Nav/><main className="publish-page"><div className="page-intro"><div className="eyebrow">FOR VENDORS & COMMUNITY</div><h1>Publish a Knowledge Base to the Cartographer Marketplace</h1><p>Make your knowledge available to Cartographer users and AI agents.</p></div>{published ? <section className="success"><span>✦</span><h2>Your Cartographer Knowledge Base is ready for review</h2><p>This is a demo, so nothing was uploaded. In a real product this would start a publishing workflow.</p><button onClick={() => setPublished(false)}>Publish another</button></section> : <form className="publish-form" onSubmit={submit}><label>Name<input required placeholder="e.g. Platform Engineering Playbook"/></label><label>Vendor or community name<input required placeholder="Your organization"/></label><label>Description<textarea required rows={4} placeholder="What will teams learn or be able to do?"/></label><div className="two-fields"><label>Version<input required defaultValue="1.0.0"/></label><label>Price<select defaultValue="Free"><option>Free</option><option>$9/mo</option><option>$19/mo</option><option>$49/mo</option></select></label></div><label>Tags <span>Separate with commas</span><input required placeholder="Infrastructure, DevOps, Reliability"/></label><label>Documents <span>Demo only — no upload required</span><div className="dropzone">⌁ <b>Drop documentation here</b> or browse files<br/><small>PDF, Markdown and text files · mock upload</small></div></label><div className="form-actions"><button type="button" className="cancel">Save draft</button><button type="submit">Publish Knowledge Base →</button></div></form>}</main></>;
+}
