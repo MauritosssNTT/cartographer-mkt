@@ -5,6 +5,8 @@ import "./marketplace-enhancements.css";
 import "./marketplace-tiers.css";
 import "./cartographer-brand.css";
 import "./atlas.css";
+import "./publish-agent.css";
+import "./capabilities.css";
 
 export const metadata: Metadata = {
   title: "Cartographer Marketplace",

@@ -16,6 +16,7 @@ export function GET(_: Request, { params }: { params: Promise<{ id: string }> })
       license: kb.license,
       updatedAt: kb.updatedDate,
       quality: kb.quality,
+      contents: kb.contents,
       install: {
         type: "knowledge-pack",
         source: `https://demo.knowledge.market/packs/${kb.id}/${kb.version}`
