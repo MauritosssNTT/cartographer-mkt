@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "cartographer-dev-kit",
+  "name": "cartographer-dev-kit",
+  "description": "A practical development kit for building, operating and extending Cartographer Knowledge Bases.",
+  "version": "0.1.0",
+  "source": {
+    "kind": "git",
+    "remote": "https://github.com/MauritosssNTT/cartographer-mkt-kb",
+    "branch": "cartographer"
+  },
+  "vendor": "Cartographer",
+  "vendorInitials": "CT",
+  "vendorPublishedCount": 1,
+  "tags": ["Cartographer", "Development", "Knowledge Bases"],
+  "verified": true,
+  "trustLevel": "Official",
+  "marketTier": "Community",
+  "price": "Free",
+  "license": "Community license",
+  "updatedAt": "New",
+  "updatedDate": "13 Nov 2026",
+  "documentCount": 0,
+  "sourceCount": 1,
+  "installCount": 0,
+  "rating": 0,
+  "ratingCount": 0,
+  "category": "Technology",
+  "accent": "#45d4b0",
+  "contents": {
+    "knowledgeSources": 0,
+    "skills": 0,
+    "mcpServers": 0,
+    "hooks": 0
+  },
+  "quality": {
+    "lastSync": "Not yet synced",
+    "verifiedSources": "Git source",
+    "cadence": "Maintainer updates",
+    "maintainedBy": "Cartographer"
+  },
+  "sources": [
+    {
+      "name": "cartographer-mkt-kb",
+      "type": "Git repository",
+      "syncedAt": "Not yet synced"
+    }
+  ],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "date": "13 Nov 2026",
+      "summary": "Initial Cartographer development kit release."
+    }
+  ]
+}

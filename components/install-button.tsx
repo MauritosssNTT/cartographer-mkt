@@ -7,8 +7,8 @@ export function InstallButton({ kb }: { kb: KnowledgeBase }) {
   const [copied, setCopied] = useState(false);
   const [origin, setOrigin] = useState("");
   useEffect(() => setOrigin(window.location.origin), []);
-  const manifestUrl = `${origin}/api/kb/${kb.id}/manifest`;
-  const prompt = `Install the cartographer Knowledge Base '${kb.name}' from ${manifestUrl}.`;
+  const manifestUrl = `${origin}/manifests/${kb.id}.json`;
+  const prompt = `Install the Cartographer Knowledge Base '${kb.name}' from ${manifestUrl}.`;
   async function copyPrompt() {
     try {
       if (!navigator.clipboard) throw new Error("Clipboard API unavailable");

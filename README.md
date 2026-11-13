@@ -2,6 +2,13 @@
 
 Standalone Next.js demo of an agent-native marketplace for versioned Knowledge Bases. It uses local mock data only; it has no authentication, payments, external database, or external service dependency.
 
+## Documentation
+
+Start with the [documentation index](docs/README.md): it links the system architecture,
+the development rules for human and AI-agent contributions, the domain glossary, and the
+Architecture Decision Records (ADRs). Update the relevant document in the same change as
+any behavioural or architectural change.
+
 ## Run locally
 
 Requires Node.js 20.9 or newer.
